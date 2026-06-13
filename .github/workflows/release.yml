@@ -39,6 +39,6 @@ jobs:
           tagName: ${{ github.ref_name }}
           releaseName: "OpenConvert ${{ github.ref_name }}"
           releaseBody: "See CHANGELOG.md for release notes."
-          releaseDraft: true
+          releaseDraft: false
           prerelease: false
           args: --bundles nsis

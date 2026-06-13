@@ -31,6 +31,7 @@
   "bundle": {
     "active": true,
     "targets": ["nsis"],
+    "createUpdaterArtifacts": true,
     "category": "Utility",
     "copyright": "Copyright (c) 2026 Sparsh Sam",
     "shortDescription": "Fast, local-first image conversion for Windows.",
