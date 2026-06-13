@@ -1,0 +1,30 @@
+[package]
+name = "openconvert"
+version = "0.1.0"
+description = "Fast, local-first file conversion for Windows."
+authors = ["Sparsh Sam"]
+license = "AGPL-3.0-only"
+repository = "https://github.com/sparshsam/OpenConvert"
+edition = "2021"
+
+[lib]
+name = "openconvert_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2.6.2", features = [] }
+
+[dependencies]
+chrono = { version = "0.4.38", features = ["serde"] }
+image = { version = "0.25.5", default-features = true }
+infer = "0.16.0"
+serde = { version = "1.0.215", features = ["derive"] }
+serde_json = "1.0.133"
+tauri = { version = "2.11.2", features = ["protocol-asset"] }
+tauri-plugin-dialog = "2.7.1"
+tauri-plugin-opener = "2.5.4"
+tauri-plugin-updater = "2.10.1"
+thiserror = "2.0.3"
+
+[dev-dependencies]
+tempfile = "3.14.0"
