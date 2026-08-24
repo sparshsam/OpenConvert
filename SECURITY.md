@@ -1,42 +1,55 @@
 # Security Policy
 
-## Supported Versions
-
-OpenConvert is currently in early development (v0.x). Security patches will be
-applied to the latest release only.
-
-| Version | Supported          |
-| ------- | ------------------ |
-| 0.1.x   | :white_check_mark: |
+Thank you for helping keep **OpenConvert** and the OpenApps collection safe. We take
+security seriously and appreciate coordinated, responsible disclosure.
 
 ## Reporting a Vulnerability
 
-OpenConvert processes files entirely locally and does not send data over the
-network, upload files, or collect telemetry. However, vulnerabilities in
-dependencies or the image processing pipeline are still taken seriously.
+**Please do NOT open a public issue for security vulnerabilities.**
 
-To report a security vulnerability:
+Use GitHub's private vulnerability reporting instead:
 
-1. **Do not** open a public GitHub issue.
-2. Send a private report to **sparshsam@users.noreply.github.com**.
-3. Include a clear description of the issue, affected versions, and steps to
-   reproduce (if applicable).
+1. Open the **Security** tab of this repository.
+2. Click **Report a vulnerability**.
+3. Complete the form with as much detail as you can provide.
 
-You should receive an acknowledgment within 72 hours. We will work with you to
-understand the scope and impact, and to release a fix as appropriate.
+Reports are visible only to the repository owner and are handled confidentially.
+If private vulnerability reporting is unavailable, contact the maintainer via
+their GitHub profile: https://github.com/sparshsam
 
-## Disclosure Policy
+### What to include
 
-We follow a coordinated disclosure process:
+- A clear summary of the vulnerability
+- The affected component, file, endpoint, or version
+- Step-by-step reproduction instructions (or a minimal proof of concept)
+- The impact if exploited
+- A suggested fix or mitigation, if you have one
+- Any relevant CWE or CVSS score
 
-- The reporter will be acknowledged.
-- A fix will be prepared and tested.
-- A security advisory will be published on GitHub.
-- The fix will be tagged in a new release.
+## Scope
 
-We aim to release a patched version within 14 days of confirmation for
-high-severity issues.
+**In scope:**
 
-## Preferred Languages
+- All source code, configuration, and CI/CD workflows in this repository
+- Production deployments built from this repository
+- Associated API servers, MCP servers, and integrations
 
-English, please.
+**Out of scope:**
+
+- Vulnerabilities in third-party dependencies — these are tracked automatically
+  by Dependabot alerts; report them upstream unless you have a working exploit
+  against this repository's specific use of the dependency
+- Issues requiring physical access to a user's device
+- Self-XSS or social-engineering attacks against individual users
+
+## Response Expectations
+
+- We will acknowledge your report within 3 business days.
+- We will confirm the vulnerability and assess impact with you.
+- We follow coordinated disclosure: fixes ship first, details are published
+  after users have had a reasonable window to update.
+
+## Supported Versions
+
+Security fixes are applied to the latest release. Verify you are running the
+most recent version before reporting.
